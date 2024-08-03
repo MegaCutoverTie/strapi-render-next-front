@@ -6,7 +6,7 @@ export interface Post {
 interface Attributes2 {
   title: string;
   description: string;
-  body: Body[];
+  body: string;
   slug: string;
   createdAt: string;
   updatedAt: string;
