@@ -1,5 +1,5 @@
 import PageCardStore from "@/components/PageCardStore";
-import PagePagination from "@/components/PagePagination";
+import PagePaginationStore from "@/components/PagePaginationStore";
 import PageTitle from "@/components/PageTitle";
 import { fetchApi } from "@/helpers/fetch-api";
 import { Book } from "@/interfaces/book"; 
@@ -41,7 +41,7 @@ const Store = async ({ searchParams }: { searchParams: { page?: string } }) => {
                 />
                 ))}
             </section>
-            <PagePagination pagination={pagination}/>
+            <PagePaginationStore pagination={pagination}/>
         </div>
     );
 };
