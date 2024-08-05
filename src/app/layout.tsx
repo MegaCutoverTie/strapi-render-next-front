@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NextTopLoader from "nextjs-toploader";
+import PageTransition from "@/components/PageTransition";
+import PageHeader from "@/components/PageHeader";
+import CartProvider from "@/context/carContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="container max-w-3xl mx-auto">
-          {children}
+        <NextTopLoader/>
+        <main className="container max-w-3xl mx-auto mt-4 space-y-4">
+          <CartProvider>
+            <PageHeader />
+            <PageTransition>
+              {children}
+            </PageTransition>
+          </CartProvider>
         </main>
       </body>
     </html>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
-    post: Post;
+    post: Post,
 }
 
 const PageCard = ({post}: Props) => {
