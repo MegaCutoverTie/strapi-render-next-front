@@ -18,6 +18,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+# Important
+
+The blog and store pages may fail to load since this project was created using a free strapi database. If you visit the site before september 1st 2024 please reaload the site when this pages fail, since the database automatically shuts down after some time without requests (this is how free strapi databases work), please be patient.
+
+If you visit the site after september 1st 2024 the database will have been automatically deleted by strapi, due to the database being a free version and it will not load blog and store pages.
+
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
